@@ -8,6 +8,35 @@ using System.Threading.Tasks;
 
 namespace PLtask3._2
 {
+
+    #region Описание задачи.
+    /*
+    На вход в качестве аргументов программы поступают два файла: tests.json и values.json (в
+    приложении к заданию находятся примеры этих файлов)
+    • values.json содержит результаты прохождения тестов с уникальными id
+     tests.json содержит структуру для построения отчёта на основе прошедших тестов
+    (вложенность может быть большей, чем в примере)
+    Напишите программу, которая формирует файл report.json с заполненными полями value для
+    структуры tests.json на основании values.json.
+
+    Пример:
+    Часть структуры tests.json:
+
+    {"id": 122, "title": "Security test", "value": "", "values":
+    [{"id": 5321, "title": "Confidentiality", "value": ""},
+    {"id": 5322, "title": "Integrity", "value": ""}]}
+
+    После заполнения в соответствии с values.json:
+    
+    {"values": [{"id": 122, "value": "failed"}, {"id": 5321,"value": "passed"}, {"id": 5322,"value": "failed"}]}
+
+    Будет иметь следующий вид в файле report.json:
+    
+    {"id": 122, "title": "Security test", "value": "failed", "values":
+    [{"id": 5321, "title": "Confidentiality", "value": "passed"},
+    {"id": 5322, "title": "Integrity", "value": "failed"}]}
+    */
+    #endregion
     class Program
     {
         static void Main(string[] args)
